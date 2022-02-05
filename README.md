@@ -25,4 +25,14 @@ We would first say sorry to one of the reviewers of this paper because we were e
 - `Pytorch` and `torchvision` are necessary, which version seems not a big deal.
 - We use `wandb` to track the results.
 
+### Experiments on toy Gaussian
+We provide four co-lab notebooks in the *notebook* folder, you can copy it to co-lab or run on your local machine.
+- **Part1_noisylabel**: some experiments verifying hypothesis 1
+- **Part2_learningdynamics**: results in Fig.2 and 3, demonstrating why we should focus on hard samples
+- **Part3_NTK**: support of proposition 1, more interesting facts of the gradients
+- **CIFAR10_path_analysis**: analyzing the learning path on CIFAR10, verifying filter can help in both noisy and clean label case.
+  - For this notebook, we need to prepare learning paths by running `cifar10h_gen_path.py` or `main_gen_path.py`
+  - You can also [download]() the results and put them under the correct path to run the experiments
+
+### Experiments on Filter-KD
 
