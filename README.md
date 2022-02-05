@@ -1,5 +1,5 @@
 # Better Supervisory Signals by Observing Learning Paths
-This repository is the official implementation of [Better Supervisory Signals by Observing Learning Paths](https://openreview.net/forum?id=Iog0djAdbHj) (ICLR 2022).
+This repository is a simple implementation of [Better Supervisory Signals by Observing Learning Paths](https://openreview.net/forum?id=Iog0djAdbHj) (ICLR 2022).
 
 ### Abstract
 Better supervision might lead to better performance. 
@@ -32,7 +32,11 @@ We provide four co-lab notebooks in the *notebook* folder, you can copy it to co
 - **Part3_NTK**: support of proposition 1, more interesting facts of the gradients
 - **CIFAR10_path_analysis**: analyzing the learning path on CIFAR10, verifying filter can help in both noisy and clean label case.
   - For this notebook, we need to prepare learning paths by running `cifar10h_gen_path.py` or `main_gen_path.py`
-  - You can also [download]() the results and put them under the correct path to run the experiments
+  - You can also [download](https://drive.google.com/file/d/17BKaG1er_b553Ik6_BUoipA6dlPf3sHq/view?usp=sharing) the results and put them under the correct path to run the experiments
 
 ### Experiments on Filter-KD
+Actually, the Filter-KD algorithm is quite easy to understand and implement. Our motivation for this algorithm is to verify the analysis proposed in the paper. Hence this implementation might not be quite perfect and efficient. Here are some explanations of our implementation.
+- **Dataloader**: in `utils.py`, we change the data loader to assign a constant index for all 50k training samples in CIFAR. We also add label noise in this loader. Hence the return of a loader becomes (x, y, ny, idx), where ny is the noisy label and idx is the assigned index. We use this index to update our p_smoothing table during training.
+- **Tiny ImageNet**: after [downloading](http://cs231n.stanford.edu/tiny-imagenet-200.zip) this dataset, we need to change the image's path, `./data/refolder_tiny_imagenet.py` is for this
+- 
 
