@@ -37,6 +37,22 @@ We provide four co-lab notebooks in the *notebook* folder, you can copy it to co
 ### Experiments on Filter-KD
 Actually, the Filter-KD algorithm is quite easy to understand and implement. Our motivation for this algorithm is to verify the analysis proposed in the paper. Hence this implementation might not be quite perfect and efficient. Here are some explanations of our implementation.
 - **Dataloader**: in `utils.py`, we change the data loader to assign a constant index for all 50k training samples in CIFAR. We also add label noise in this loader. Hence the return of a loader becomes (x, y, ny, idx), where ny is the noisy label and idx is the assigned index. We use this index to update our p_smoothing table during training.
-- **Tiny ImageNet**: after [downloading](http://cs231n.stanford.edu/tiny-imagenet-200.zip) this dataset, we need to change the image's path, `./data/refolder_tiny_imagenet.py` is for this
-- **Generate teacher**: 
+- **Tiny ImageNet**: after [downloading](http://cs231n.stanford.edu/tiny-imagenet-200.zip) (or `wget http://cs231n.stanford.edu/tiny-imagenet-200.zip`) this dataset, we need to change the image's path, `./data/refolder_tiny_imagenet.py` is for this
+- **Generate teacher**: you can run `main_gen_teacher.py` to train a network under the supervision of one-hot labels. After training, the code will save a checkpoint and a \*.npy file. The checkpoint is the teacher for standard KD while the \*.npy file the the teacher for Filter-KD (i.e., q_smooth in our algorithm).
+- **Distillation**: you can run `main_distill.py` to get results for standard KD or Filter-KD by specifying `--teach_type` (net is standard KD and table is Filter-KD).
+- **Same initialization**: to make a fair comparison, you can run `old_cifar_noisy.py` in which the initialization of different methods would be exactly the same
 
+# Reference
+For technical details and full experimental results, please check [our paper](https://openreview.net/forum?id=Iog0djAdbHj).
+```
+@inproceedings{ren:zigzag,
+    author = {Yi Ren and Shangmin Guo and Danica J. Sutherland},
+    title = {Better Supervisory Signals by Observing Learning Paths},
+    year = {2022},
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    url = {https://openreview.net/forum?id=Iog0djAdbHj},
+}
+```
+
+# Contact
+Please contact renyi.joshua@gmail.com if you have any question on the codes.
