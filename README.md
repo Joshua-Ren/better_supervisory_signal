@@ -22,6 +22,7 @@ as verified by experiments in various settings.
 
 - Hard samples converges slower in a **zig-zag** path
 
+*(Gray cross is true p(y|x), red cross is the one-hot label, green diamond is the output of the initialized network.)*
 <div align=center>
 <img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/zigzag_fast.gif" width="600" height="600" />
 </div>
