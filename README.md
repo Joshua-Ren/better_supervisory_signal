@@ -15,7 +15,7 @@ Inspired by this, we propose a new algorithm, Filter-KD, which further enhances 
 as verified by experiments in various settings.
 
 ### Interesting findings
-
+<img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/hardsamples.gif" width="40" height="40" />
 
 # About this repo
 We would first say sorry to one of the reviewers of this paper because we were eventually not able to accomplish the ImageNet experiments in this version, as GPU is really expensive T_T. We hope someone who is interested in this work could verify our results on a large dataset.
