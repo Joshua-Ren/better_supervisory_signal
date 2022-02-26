@@ -18,11 +18,13 @@ as verified by experiments in various settings.
 
 - Hard samples drift more in a long-enough train
 
-<center class='half'><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/settings.gif" width="480"/><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/hardsamples.gif" width="200"/></center>
+<div align=center><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/settings.gif" width="480"/><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/hardsamples.gif" width="220"/></div>
 
 - Hard samples converges slower in a **zig-zag** path
 
+<div align=center>
 <img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/zigzag_fast.gif" width="600" height="600" />
+</div>
 
 # About this repo
 We would first say sorry to one of the reviewers of this paper because we were eventually not able to accomplish the ImageNet experiments in this version, as GPU is really expensive T_T. We hope someone who is interested in this work could verify our results on a large dataset.
