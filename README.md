@@ -15,7 +15,14 @@ Inspired by this, we propose a new algorithm, Filter-KD, which further enhances 
 as verified by experiments in various settings.
 
 ### Interesting findings
-<img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/hardsamples.gif" width="400" height="400" />
+
+- Hard samples drift more in a long-enough train
+
+<center class='half'><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/settings.gif" width="480"/><img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/hardsamples.gif" width="200"/></center>
+
+- Hard samples converges slower in a **zig-zag** path
+
+<img src="https://github.com/Joshua-Ren/better_supervisory_signal/blob/main/gifs/zigzag_fast.gif" width="600" height="600" />
 
 # About this repo
 We would first say sorry to one of the reviewers of this paper because we were eventually not able to accomplish the ImageNet experiments in this version, as GPU is really expensive T_T. We hope someone who is interested in this work could verify our results on a large dataset.
